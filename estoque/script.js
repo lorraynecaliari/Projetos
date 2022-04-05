@@ -38,12 +38,13 @@ function adicionarProduto(e){
 	e.preventDefault();
 }
 
-function removeProduto(qtd){
+function removeProduto(nome){
+	if(confirm("Deseja deletar o produto " + nome)){ //pergunta para o usuario
 	var armazena = JSON.parse(localStorage.getItem('armazena'));
 	console.log(armazena);
 
 	 for(var i = 0 ; i < armazena.length; i++){
-		if(armazena[i].qtd == qtd){
+		if(armazena[i].nome == nome){
 			armazena.splice(i, 1);
 		}
 	}
@@ -51,6 +52,7 @@ function removeProduto(qtd){
 	localStorage.setItem('armazena', JSON.stringify(armazena));
 
 	mostraProduto();
+	}
 }
 
 function editaProduto(qtd){
@@ -73,9 +75,10 @@ function mostraProduto(){
 		var valor = produtos[i].valor;
 
 		armResultado.innerHTML += '<tr><td>'+ nome + '</td>'+
-		 							 	  '<td>'+ qtd + '</td>' +
-		 							 	  '<td>'+ valor + '</td>' +
-		 							 	  '<td><button onclick="removeProduto(\''+ qtd +'\')" class="btnRem">Remover</button>'+ '<button onclick="editaProduto(\''+ qtd +'\')" class="btnEdt">Atualizar</button></td>'+
-		 							 '</tr>';
+		 			'<td>'+ qtd + '</td>' +
+		 			'<td>'+ valor + '</td>' +
+		 			'<td><button onclick="removeProduto(\''+ nome +'\')" class="btnRem">Remover</button>'+ 
+					'<button onclick="editaProduto(\''+ qtd +'\')" class="btnEdt">Atualizar</button></td>'+
+		 			'</tr>';
 	}
 }

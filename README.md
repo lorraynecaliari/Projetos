@@ -2,4 +2,4 @@
 
 1- Controle de estoque
 
-<img src="https://github.com/lorraynecaliari/Projetos/blob/main/imgprojetos/estoque.png?raw=true">
+<img src="https://github.com/lorraynecaliari/Projetos/blob/main/estoque/estoque.png?raw=true">

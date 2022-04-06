@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Estoque</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Estoque</title>
+    <script src="script.js"></script>
 </head>
 <body>
-	 <div class="container">
+    <header>
+        <h1>Controle de Estoque</h1>
+        <input type="search" id="pesquisar" placeholder="Pesquisar...">
+        <img src="lupa.png" class="lupa">
+    </header>
 
-        <h2>Controle do Estoque</h2>
-<!--formulario-->
+    <div class="container">
+        <div class="info">
+        <div class="input">
+            <input type="text" id="produto" placeholder="Nome">
+            <input type="number" id="qtd" placeholder="Quantidade">
+            <input type="number" id="valor" placeholder="Valor">
+            <button onclick="produto.salvar()" id="btn" class="btn">Salvar</button>
+            <button onclick="produto.cancelar()" class="btn">Limpar</button> 
+        </div>
 
-    <div>
-    <form method="post" id="form">
-        <input type="text" placeholder="Nome" id="nome" class="input">
-        <input type="number" placeholder="Quantidade" id="qtd" class="input">
-        <input type="number" placeholder="Valor" id="valor" class="input">
-
-        <input type="submit" value="Adicionar" id="adicionar" class="btnAdd">
-    </form>
+       
     </div>
- 
- <!--lista-->
 
     <div>
         <table class="tabela">
             <thead>
-            <tr>
-                <th>Nome</th>
+                <th class="center">Código</th>
+                <th>Produto</th>
                 <th>Quantidade</th>
                 <th>Valor</th>
-                <th colspan="2">Ação</th>
-            </tr>
-        </thead>
+                <th class="center">Ações</th>
+            </thead>
+            <tbody id="saida"></tbody>
+        </table>
+    </div>
+    </div>
+</body>
+</html>
         <tbody id="resultado"></tbody>
         </table>
     </div>

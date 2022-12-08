@@ -1,6 +1,6 @@
 # Projetos
 
-1- Controle de estoque, o script permite o usuario: incluir produto, atualizar e deletar itens da lista.
+1- Controle de estoque, o script permite o usuario: incluir produto, editar e deletar itens da lista.
 
 <img src="https://github.com/lorraynecaliari/Projetos/blob/main/estoque/estoque.png?raw=true">
 

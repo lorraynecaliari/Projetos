@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contato" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ksM-mY-qdy">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MinhaCelula" rowHeight="100" id="E3s-rb-MAp" customClass="MyCell" customModule="Contato" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E3s-rb-MAp" id="jSx-Y4-HZt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaye Bell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci7-sV-yQb" userLabel="nome">
+                                                    <rect key="frame" x="28" y="13" width="74" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kate@mac.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMd-ve-nCc" userLabel="email">
+                                                    <rect key="frame" x="28.000000000000007" y="42" width="117.66666666666669" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="043 Davis Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCK-MH-T1T" userLabel="endereco">
+                                                    <rect key="frame" x="32" y="71" width="128" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXU-jG-ScO" userLabel="telefone">
+                                                    <rect key="frame" x="305" y="13" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BCK-MH-T1T" firstAttribute="leading" secondItem="jSx-Y4-HZt" secondAttribute="leading" constant="32" id="7vw-RJ-4yj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dXU-jG-ScO" secondAttribute="trailing" constant="12" id="A4r-Cd-ssi"/>
+                                                <constraint firstItem="QMd-ve-nCc" firstAttribute="top" secondItem="Ci7-sV-yQb" secondAttribute="bottom" constant="8" id="b76-u9-5aA"/>
+                                                <constraint firstItem="QMd-ve-nCc" firstAttribute="leading" secondItem="jSx-Y4-HZt" secondAttribute="leadingMargin" constant="12" id="gMc-TD-R9m"/>
+                                                <constraint firstItem="Ci7-sV-yQb" firstAttribute="leading" secondItem="jSx-Y4-HZt" secondAttribute="leadingMargin" constant="12" id="gca-0t-dHg"/>
+                                                <constraint firstItem="dXU-jG-ScO" firstAttribute="top" secondItem="jSx-Y4-HZt" secondAttribute="topMargin" constant="2" id="rgl-WC-y6x"/>
+                                                <constraint firstItem="BCK-MH-T1T" firstAttribute="top" secondItem="QMd-ve-nCc" secondAttribute="bottom" constant="8" id="ugH-95-EDO"/>
+                                                <constraint firstItem="Ci7-sV-yQb" firstAttribute="top" secondItem="jSx-Y4-HZt" secondAttribute="topMargin" constant="2" id="wFR-Vx-jWi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="email" destination="QMd-ve-nCc" id="C30-db-Wfw"/>
+                                            <outlet property="endereco" destination="BCK-MH-T1T" id="TjK-VL-Tc2"/>
+                                            <outlet property="nome" destination="Ci7-sV-yQb" id="C6m-o1-7y5"/>
+                                            <outlet property="telefone" destination="dXU-jG-ScO" id="6nq-Qa-lt1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ksM-mY-qdy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mef-kz-QAT"/>
+                            <constraint firstItem="ksM-mY-qdy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aRA-Sd-GXU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ksM-mY-qdy" secondAttribute="bottom" id="bXQ-O5-vPk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ksM-mY-qdy" secondAttribute="trailing" id="eTM-re-CfT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ksM-mY-qdy" id="AEK-ks-q4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

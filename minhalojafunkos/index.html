@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+        <img src="img/logo.jpg"  class="img-thumbnail">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Entrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cadastrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Minha Conta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Meus Pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carrinho</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  
+    <!--Main-->
+    <main>
+        <div class="container text-center">
+            <div class="row my-3">
+
+              <!--filtro aside-->
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">
+                      Encontre seu Funko
+                    </div><br>
+                    <div class="card-body">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected>Tipo</option>
+                        <option value="1">POP!</option>
+                        <option value="2">Edição Especial</option>
+                      </select>
+                      <br>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected>Tamanho</option>
+                        <option value="1">UN</option>
+                        <option value="2">P</option>
+                        <option value="3">M</option>
+                        <option value="4">L</option>
+                      </select>
+                      <br>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected>Marca</option>
+                        <option value="1">Marvel</option>
+                        <option value="2">Harry Potter</option>
+                        <option value="3">Stranger Things</option>
+                      </select>
+                      <br>
+                      <div class="input-group input-group-sm mb-3">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">De</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">Até</span>
+                      </div><br>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-dark" type="button">Aplicar Filtro</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>  
+
+              <!--carousel-->
+              <div class="col-md-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/banner/banner2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/banner/banner5.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/banner/banner3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/banner/banner1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/banner/banner4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>       
+                
+    <div class="container text-center">
+
+      <!--produtos-->
+      <div class="row my-3">
+        <div class="col-md-8">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/eleven.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">STRANGER THINGS - ELEVEN</h5>
+                  <p class="card-text">R$ 245,90</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/dustin.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">STRANGER THINGS - DUSTIN</h5>
+                  <p class="card-text">R$ 210,90</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/will.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">STRANGER THINGS - WILL</h5>
+                  <p class="card-text">R$ 287,90</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/harry.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">FUNKO POP - HARRY POTTER</h5>
+                  <p class="card-text">R$ 210,90</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/hermione.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">HARRY POTTER - HERMIONE</h5>
+                  <p class="card-text">R$ 119,90</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/ron.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">HARRY POTTER - RON WEASLEY</h5>
+                  <p class="card-text">R$ 159,50</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/loki.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">MARVEL W/SCEPTER - LOKI</h5>
+                  <p class="card-text">R$ 179,00</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/strange.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">MARVEL - DOUTOR ESTRANHO</h5>
+                  <p class="card-text">R$ 209,90</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/produtos/thor.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">MARVEL - THOR FILHO DE ODIN</h5>
+                  <p class="card-text">R$ 258,90</p>
+                  <a href="#" class="btn btn-dark">Adicionar ao Carrinho</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <!--produtos aside-->
+      <div class="col-6 col-md-4">
+        <div class="produtos_aside">
+            
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <h3>Funkos mais vistos</h3><br><br><br>
+              <div class="col-md-4">
+                <img src="img/produtos/ginny.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">HARRY POTTER - GINNY WEASLEY</h5>
+                  <p class="card-text">R$ 209,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="img/produtos/pride.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">DISNEY: PRIDE - WALL-E (RAINBOW) </h5>
+                  <p class="card-text">R$ 169,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="img/produtos/goku.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">DRAGON BALL Z - GOKU</h5>
+                  <p class="card-text">R$ 290,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="img/produtos/grogu.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">FUNKO STAR WARS - GROGU</h5>
+                  <p class="card-text">R$ 260,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="img/produtos/vecna.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">STRANGER THINGS - VECNA</h5>
+                  <p class="card-text">R$ 134,91</p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-dark" type="button">Mais Produtos</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="max-width: 540px;">
+            <div class="card-body">
+              <h4 class="card-title">Boletim de Notícias</h4>
+              <label for="exampleFormControlInput1" class="form-label">Infome seu Email para receber nossas notícias em primeira mão !!</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@endereco.com">
+              <br>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-dark" type="button">Quero Receber</button>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+   <footer>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col">
+          <div class="footer-widget1">
+            <p>Metodos de Pagamento</p>
+              <a href="#"><img src="img/formarpagamento.png" class="img_pagamento"></a>
+          </div>
+        </div>
+  
+        <div class="col">
+          <div class="footer-widget">
+            <h6>Links Rapidos</h6>
+            <ul>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Politica da Loja</a></li>
+                <li><a href="#">Cancelamento e Estorno</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Politica e Privacidade</a></li>
+                <li><a href="#">Reclame Aqui</a></li>
+            </ul>
+        </div>
+        </div>
+  
+        <div class="col">
+          <div class="footer-widget">
+            <h6>Medias</h6>
+            <ul>
+                <li>
+                  <img src="img/redes/face.png" class="redes">
+                  <img src="img/redes/tw.png" class="redes">
+                  <img src="img/redes/tele.png" class="redes">
+                </li>
+                <li>
+                  <img src="img/redes/wpp.png" class="redes">
+                  <img src="img/redes/insta.png" class="redes">
+                  <img src="img/redes/ttk.png" class="redes">
+                </li>
+                
+            </ul>
+        </div>
+        </div>
+        <div class="col">
+          <div class="footer-widget">
+            <h6>Contato</h6>
+            <ul>
+                <li><a href="#">R. Cláudio Manoel, 1162 - Savassi, Belo Horizonte - MG, 30140-100</a></li>
+                <li><a href="#">puc@pucminas.com.br</a></li>
+                <li><a href="#">(31) 3131-2450</a></li>
+            </ul>
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="col-lg-12 text-center">
+      <div class="footer-copyright-text">
+        <p>Copyright &copy; 2023 | Lorrayne Caliari</p>
+    </div>
+    </div>
+    </div>
+  
+   </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+</html>

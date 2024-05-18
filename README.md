@@ -2,6 +2,7 @@
 ![Calculadora](Calculadora/calculadora.png)
 
 ## Loja Funkos (em desenvolvimento)
+![Funkos](minhalojafunkos/lojaFunkos.png)
 ![Funkos](minhalojafunkos/finalfunkos.png)
 
 ## Estoque

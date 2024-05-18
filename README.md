@@ -1,2 +1,2 @@
 ## Calculadora
-- [Calculadora]([Projetos/Caluladora/calculadora.png])
+- [Calculadora]([Calculadora/calculadora.png])

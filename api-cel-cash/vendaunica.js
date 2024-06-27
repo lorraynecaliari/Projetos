@@ -176,23 +176,45 @@ document.addEventListener("DOMContentLoaded", function() {
         listarVendas(status);
     });
 
-    document.getElementById('nomeCliente').addEventListener('input', function() {
-        const nome = this.value.trim().toLowerCase();
-        filtrarClientesPorNome(nome);
+       // Função genérica para filtrar 
+   function filtrar(inputValue, coluna) {
+    const linhas = document.querySelectorAll('table tbody tr');
+
+    linhas.forEach(linha => {
+        const valorCliente = linha.querySelector(`td:nth-child(${coluna})`) || linha.querySelector('th');
+        const valorTexto = valorCliente.textContent.trim().toLowerCase();
+        if (valorTexto.includes(inputValue)) {
+            linha.style.display = ''; // Exibe a linha se o valor do cliente corresponder
+        } else {
+            linha.style.display = 'none'; // Oculta a linha se o valor do cliente não corresponder
+        }
+    });
+}
+
+    document.getElementById('galaxPayId').addEventListener('input', function() {
+        const codigo = this.value.trim().toLowerCase();
+        filtrar(codigo, 1);
     });
 
-    function filtrarClientesPorNome(nome) {
-        const linhas = document.querySelectorAll('table tbody tr');
+    document.getElementById('nomeCliente').addEventListener('input', function() {
+        const nome = this.value.trim().toLowerCase();
+        filtrar(nome, 2);
+    });
     
-        linhas.forEach(linha => {
-            const nomeCliente = linha.querySelector('td:nth-child(2)').textContent.trim().toLowerCase();
-            if (nomeCliente.includes(nome)) {
-                linha.style.display = ''; // Exibe a linha se o nome do cliente corresponder
-            } else {
-                linha.style.display = 'none'; // Oculta a linha se o nome do cliente não corresponder
-            }
-        });
-    }
+    document.getElementById('documentoCliente').addEventListener('input', function() {
+        const documento = this.value.trim().toLowerCase();
+        filtrar(documento, 3);
+    });
+    
+    document.getElementById('valorVenda').addEventListener('input', function() {
+        const valor = this.value.trim().toLowerCase();
+        filtrar(valor, 4);
+    });
+
+    document.getElementById('statusFilterPayment').addEventListener('change', function() {
+        const metodoPagamento = this.value.trim().toLowerCase();
+        filtrar(metodoPagamento, 5);
+    });
 
     // Obter o token e listar vendas automaticamente ao carregar a página sem filtro de status
     obterToken(() => listarVendas(''));

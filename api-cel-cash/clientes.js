@@ -173,25 +173,46 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Adiciona evento de input ao campo de nome do cliente
-    document.getElementById('nomeCliente').addEventListener('input', function() {
-        const nome = this.value.trim().toLowerCase();
-        filtrarClientesPorNome(nome);
-    });
+   // Função genérica para filtrar clientes
+   function filtrarClientes(inputValue, coluna) {
+    const linhas = document.querySelectorAll('table tbody tr');
 
-    // Função para filtrar clientes pelo nome
-    function filtrarClientesPorNome(nome) {
-        const linhas = document.querySelectorAll('table tbody tr');
-    
-        linhas.forEach(linha => {
-            const nomeCliente = linha.querySelector('td:nth-child(2)').textContent.trim().toLowerCase();
-            if (nomeCliente.includes(nome)) {
-                linha.style.display = ''; // Exibe a linha se o nome do cliente corresponder
-            } else {
-                linha.style.display = 'none'; // Oculta a linha se o nome do cliente não corresponder
-            }
-        });
-    }
+    linhas.forEach(linha => {
+        const valorCliente = linha.querySelector(`td:nth-child(${coluna})`) || linha.querySelector('th');
+        const valorTexto = valorCliente.textContent.trim().toLowerCase();
+        if (valorTexto.includes(inputValue)) {
+            linha.style.display = ''; // Exibe a linha se o valor do cliente corresponder
+        } else {
+            linha.style.display = 'none'; // Oculta a linha se o valor do cliente não corresponder
+        }
+    });
+}
+
+// Adiciona eventos de input aos campos de filtro
+document.getElementById('nomeCliente').addEventListener('input', function() {
+    const nome = this.value.trim().toLowerCase();
+    filtrarClientes(nome, 2);
+});
+
+document.getElementById('galaxPayId').addEventListener('input', function() {
+    const codigo = this.value.trim().toLowerCase();
+    filtrarClientes(codigo, 1);
+});
+
+document.getElementById('documentoCliente').addEventListener('input', function() {
+    const documento = this.value.trim().toLowerCase();
+    filtrarClientes(documento, 3);
+});
+
+document.getElementById('emailCliente').addEventListener('input', function() {
+    const email = this.value.trim().toLowerCase();
+    filtrarClientes(email, 4);
+});
+
+document.getElementById('telefoneCliente').addEventListener('input', function() {
+    const telefone = this.value.trim().toLowerCase();
+    filtrarClientes(telefone, 5);
+});
 
     // Obter o token e listar clientes automaticamente ao carregar a página
     obterToken(listarClientes);

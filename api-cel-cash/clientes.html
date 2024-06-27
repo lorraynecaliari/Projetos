@@ -27,39 +27,52 @@
                         <a class="nav-link active text-light" aria-current="page" href="vendaunica.html">Venda Unica</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Assinatura</a>
+                        <a class="nav-link active text-light" aria-current="page" href="assinatura.html">Assinatura</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
     <div class="container-md">
-        <a class="btn btn-success btn-sm" href="cadastrarcliente.html">Cadastrar Cliente</a>
-    </div>
-
-    <div class="container-md">
+        <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
+        
         <div id="clientesEncontrados">
             <a id="totalClientes"></a>
-        </div>  
+        </div> 
 
-        <div class="col-md-4">
-            <input type="text" class="form-control" id="nomeCliente" placeholder="Digite o nome do cliente">
-        </div>
-
-        <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
+        <form class="row g-3">
+            
+            <div class="col-md-3">
+                <a class="btn btn-success btn-md" href="cadastrarcliente.html">Cadastrar Cliente</a>
+            </div>
+        </form>
     </div> 
 
     <div class="container-md">
-        <table class="table table-striped table-hover">
+            <table class="table table-hover table-bordered">
             <thead>
             <tr>
-                <th scope="col">Código</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Documento</th>
-                <th scope="col">E-mail</th>
-                <th scope="col">Telefone</th>
+                <th scope="col">
+                    Código
+                    <input type="text" class="form-control" id="galaxPayId" placeholder="">
+                </th>
+                <th scope="col">
+                    Nome
+                    <input type="text" class="form-control" id="nomeCliente" placeholder="">
+                </th>
+                <th scope="col">
+                    Documento
+                    <input type="text" class="form-control" id="documentoCliente" placeholder="">
+                </th>
+                <th scope="col">
+                    E-mail
+                    <input type="text" class="form-control" id="emailCliente" placeholder="">
+                </th>
+                <th scope="col">
+                    Telefone
+                    <input type="text" class="form-control" id="telefoneCliente" placeholder="">
+                </th>
                 <th scope="col">Ações</th>
             </tr>
             </thead>

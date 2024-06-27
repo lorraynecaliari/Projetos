@@ -34,35 +34,61 @@
         </div>
     </nav>
 
+
+
     <div class="container-md">
-        <select id="statusFilter">
-            <option value="">Todos</option>
-            <option value="active">Ativa</option>
-            <option value="canceled">Cancelada</option>
-            <option value="closed">Encerrada</option>
-            <option value="waitingPayment">Aguardando pagamento</option>
-            <option value="inactive">Inativa</option>
-        </select>
         <div id="AssinaturasEncontradas">
             <a id="totalAssinaturas"></a>
         </div>  
 
-        <div class="col-md-4">   
-            <input type="text" class="form-control" id="nomeCliente" placeholder="Digite o nome do cliente">
-        </div>
+        <form class="row g-3">
+            <div class="col-md-3">
+                <a class="btn btn-success btn-md" href="cadastrarassinatura.html">Cadastrar Assinatura</a>
+            </div>
+        </form>
     </div> 
 
     <div class="container-md">
         <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
-        <table class="table table-striped table-hover">
+        <table class="table table-hover table-bordered">
             <thead>
             <tr>
-                <th scope="col">Código</th>
-                <th scope="col">Cliente</th>
-                <th scope="col">Documento do Cliente</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Método de Pagamento</th>
-                <th scope="col">Status</th>
+                <th scope="col">
+                    Código
+                    <input type="text" class="form-control" id="galaxPayId" placeholder="">
+                </th>
+                <th scope="col">
+                    Cliente
+                    <input type="text" class="form-control" id="nomeCliente" placeholder="">
+                </th>
+                <th scope="col">
+                    Documento
+                    <input type="text" class="form-control" id="documentoCliente" placeholder="">
+                </th>
+                <th scope="col">
+                    Valor
+                    <input type="text" class="form-control" id="valorAssinatura" placeholder="">
+                </th>
+                <th scope="col">
+                    Método de Pagamento
+                    <select id="statusFilterPayment">
+                        <option value="">Todos</option>
+                        <option value="creditcard">Cartão de Credito</option>
+                        <option value="boleto">Boleto</option>
+                        <option value="pix">Pix</option>
+                    </select>
+                </th>
+                <th scope="col">
+                    Status
+                    <select id="statusFilter">
+                        <option value="">Todos</option>
+                        <option value="active">Ativa</option>
+                        <option value="canceled">Cancelada</option>
+                        <option value="closed">Encerrada</option>
+                        <option value="waitingPayment">Aguardando pagamento</option>
+                        <option value="inactive">Inativa</option>
+                    </select>
+                </th>
                 <th scope="col">Ações</th>
             </tr>
             </thead>
